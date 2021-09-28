@@ -1,0 +1,26 @@
+type Note @model {
+  id: ID!
+  name: String!
+  description: String
+  image: String
+}
+
+type CustDB @model {
+  id: ID!
+  firstName: String!
+  lastName: String
+  email:String!
+  phone:String!
+  language:String!
+  memberLevel:String
+  pin:Int
+}
+
+type Prompt @model {
+  id: ID!
+  title: String!
+  description: String
+  language: String!
+  category: String!
+  filepath: String!
+}

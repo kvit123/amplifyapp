@@ -37,3 +37,93 @@ export const onDeleteNote = /* GraphQL */ `
     }
   }
 `;
+export const onCreateCustDB = /* GraphQL */ `
+  subscription OnCreateCustDB {
+    onCreateCustDB {
+      id
+      firstName
+      lastName
+      email
+      phone
+      language
+      memberLevel
+      pin
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateCustDB = /* GraphQL */ `
+  subscription OnUpdateCustDB {
+    onUpdateCustDB {
+      id
+      firstName
+      lastName
+      email
+      phone
+      language
+      memberLevel
+      pin
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteCustDB = /* GraphQL */ `
+  subscription OnDeleteCustDB {
+    onDeleteCustDB {
+      id
+      firstName
+      lastName
+      email
+      phone
+      language
+      memberLevel
+      pin
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onCreatePrompt = /* GraphQL */ `
+  subscription OnCreatePrompt {
+    onCreatePrompt {
+      id
+      title
+      description
+      language
+      category
+      filepath
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdatePrompt = /* GraphQL */ `
+  subscription OnUpdatePrompt {
+    onUpdatePrompt {
+      id
+      title
+      description
+      language
+      category
+      filepath
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeletePrompt = /* GraphQL */ `
+  subscription OnDeletePrompt {
+    onDeletePrompt {
+      id
+      title
+      description
+      language
+      category
+      filepath
+      createdAt
+      updatedAt
+    }
+  }
+`;

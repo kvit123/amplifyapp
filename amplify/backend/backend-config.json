@@ -27,16 +27,15 @@
     }
   },
   "api": {
-    "notesapp": {
+    "thconnect": {
       "service": "AppSync",
       "providerPlugin": "awscloudformation",
       "output": {
         "authConfig": {
           "defaultAuthentication": {
-            "authenticationType": "API_KEY",
-            "apiKeyConfig": {
-              "apiKeyExpirationDays": 365,
-              "description": "serverless-amplify"
+            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+            "userPoolConfig": {
+              "userPoolId": "authamplifyapp71838708"
             }
           },
           "additionalAuthenticationProviders": []
