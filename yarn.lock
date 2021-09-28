@@ -3854,6 +3854,11 @@ amazon-cognito-identity-js@5.1.0:
     isomorphic-unfetch "^3.0.0"
     js-cookie "^2.2.1"
 
+amazon-connect-streams@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/amazon-connect-streams/-/amazon-connect-streams-1.7.0.tgz#8c73c9fc043d87d9e1ae4bc0d3f89d5d64388b91"
+  integrity sha512-7+nxNilb40TpBZoIlZrg/9FiQDr/FQkivjvwv62KOvVUQDBo7viIjqwEob95ThB8C/v+ZO35KVo5x4CyBuPPng==
+
 ansi-colors@^3.0.0:
   version "3.2.4"
   resolved "https://registry.npmjs.org/ansi-colors/-/ansi-colors-3.2.4.tgz"

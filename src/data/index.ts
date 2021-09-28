@@ -9,6 +9,17 @@ export type Order = {
     status: string;
 };
 
+export type CustomerProfile = {
+    id: string;
+    firstName: string;
+    lastName: string;
+    phone: string;
+    language: string;
+    memberLevel: string;
+    pin: number;
+    email: string;
+};
+
 const data: Order[] = [
     {
         customer: 'Vittawat',
