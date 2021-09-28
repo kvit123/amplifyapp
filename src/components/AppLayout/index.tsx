@@ -46,13 +46,18 @@ const AppLayout: FunctionComponent = ({ children }) => {
                         "items": [
                           {
                             "type": SideNavigationItemType.LINK,
-                            "text": "DynamoDB",
+                            "text": "Customer Profile",
                             "href": "/customerDB"
                           },
                           {
                             "type": SideNavigationItemType.LINK,
-                            "text": "IVR",
+                            "text": "Message IVR",
                             "href": "/messageIVR"
+                          },
+                          {
+                            "type": SideNavigationItemType.LINK,
+                            "text": "Prompt",
+                            "href": "/prompt"
                           },
                           {
                             "type": SideNavigationItemType.LINK,

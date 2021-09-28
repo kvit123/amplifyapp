@@ -9,8 +9,16 @@ import uploadPage from './components/uploadPage';
 import Dashboard from './components/Dashboard';
 import Agent from './components/Agent';
 import click2CallPage from './components/Click2call/click2CallPage';
+//Import component CRUD customer profile
 import customerDB from './components/Admin/customerDB'
 import creatCustomer from './components/Admin/components/CustomerDB/creatCustomer'
+//Import component CRUD messageIVR
+import MessageIVR from './components/Admin/components/messageIVR'
+
+//Import component CRUD prompt
+import Prompt from './components/Admin/components/prompt'
+
+
 // const withLayout =
 //     (Component: ComponentType): FunctionComponent =>
 //     (props) =>
@@ -44,6 +52,8 @@ function App() {
         <Route exact path="/c2c" component={withLayout(click2CallPage)}></Route>
         <Route exact path="/customerDB" component={withLayout(customerDB)}></Route>
         <Route exact path="/creatCustomer" component={withLayout(creatCustomer)}></Route>
+        <Route exact path="/messageIVR" component={withLayout(MessageIVR)}></Route>
+        <Route exact path="/prompt" component={withLayout(Prompt)}></Route>
       </Switch>
     </Router> 
     </NorthStarThemeProvider>

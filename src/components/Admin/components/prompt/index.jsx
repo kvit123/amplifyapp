@@ -1,9 +1,9 @@
 
-import React, { FunctionComponent, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
+import Table from 'aws-northstar/components/Table';
 import Button from 'aws-northstar/components/Button';
 import Inline from 'aws-northstar/layouts/Inline';
-import Table, { Column } from 'aws-northstar/components/Table';
 
 
 import { API, graphqlOperation, Storage } from 'aws-amplify';
@@ -13,9 +13,7 @@ import { listCustDBS } from '../../../../graphql/queries';
 import { CustomerProfile } from '../../../../data';
 
 
-
-
-const columnDefinitions: Column<CustomerProfile>[] = [
+const columnDefinitions = [
     {
         id: 'id',
         width: 150,
@@ -66,12 +64,14 @@ const columnDefinitions: Column<CustomerProfile>[] = [
     },
 ];
 
-const OrdersTable: FunctionComponent = () => {
-    const [selectedItems, setSelectedItems] = useState<object[]>([]);
-    const history = useHistory();
+const Prompt = () => {
 
-    const [customerProfile, setCustomerProfile] = React.useState([])
-    React.useEffect( () => {
+    const [selectedItems, setSelectedItems] = useState([])
+    const history = useHistory()
+
+    const [customerProfile, setCustomerProfile] = useState([])
+
+    useEffect( () => {
         fetchCustomerProfile()
     }, [])
 
@@ -89,11 +89,11 @@ const OrdersTable: FunctionComponent = () => {
         history.push('/creatCustomer');
     };
 
-    const handleSelectionChange = (items: object[]) => {
-        if (!(selectedItems.length === 0 && items.length === 0)) {
-            setSelectedItems(items);
-        }
-    };
+    // const handleSelectionChange = (items) => {
+    //     if (!(selectedItems.length === 0 && items.length === 0)) {
+    //         setSelectedItems(items);
+    //     }
+    // };
 
     const tableActions = (
         <Inline>
@@ -108,8 +108,8 @@ const OrdersTable: FunctionComponent = () => {
 
     return (
         <Table
-            onSelectionChange={handleSelectionChange}
-            tableTitle="Customer Database"
+            //onSelectionChange={handleSelectionChange}
+            tableTitle="Voice Prompt"
             columnDefinitions={columnDefinitions}
             items={customerProfile}
             actionGroup={tableActions}
@@ -118,4 +118,4 @@ const OrdersTable: FunctionComponent = () => {
     );
 };
 
-export default OrdersTable;
+export default Prompt;
