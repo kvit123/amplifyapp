@@ -28,14 +28,14 @@ const helpPanel = (
 
 const AppLayout: FunctionComponent = ({ children }) => {
     const Header = useMemo(
-        () => <HeaderBase title="Connect Demo" logoPath="/amazon_connect_logo.png" />,
+        () => <HeaderBase title="Amazon Connect" logoPath="/amazon_connect_logo.png" />,
         []
     );
     const Breadcrumbs = useMemo(() => <BreadcrumbGroup rootPath="Home" />, []);
     const SideNavigation = useMemo(() => {
         return (
             <SideNavigationBase
-                header={{ text: 'Amazon Connect Demo', href: '/' }}
+                header={{ text: 'Connect Demo', href: '/' }}
                 items={[
                     { text: 'Home', type: SideNavigationItemType.LINK, href: '/' },
                     { text: 'Agent', type: SideNavigationItemType.LINK, href: '/agent' },
